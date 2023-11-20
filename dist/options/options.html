@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>keyword redirect settings</title>
+		<meta charset="utf-8">
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			html {
+				font-size: 14px;
+			}
+
+			body {
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+			}
+
+			h1 {
+				font-size: 4rem;
+			}
+
+			h3 {
+				font-size: 1.48rem;
+			}
+
+			p {
+				font-size: 1rem;
+				line-height: 145%;
+				margin-top: 0.8rem;
+			}
+
+			input,
+			button {
+				height: 3rem;
+				padding: 0 1rem;
+				font-size: 1.2rem;
+				margin-right: 0.2rem;
+				border: none;
+			}
+
+			input:last-child,
+			button:last-child {
+				margin-right: 0;
+			}
+
+			input {
+				background-color: white;
+			}
+
+			button {
+				background-color: black;
+				color: white;
+			}
+
+			footer {
+				display: flex;
+				justify-content: right;
+				font-size: 0.9rem;
+				margin-top: 2rem;
+			}
+
+			#settings {
+				width: 100%;
+			}
+
+			#inputContainer,
+			#controlContainer {
+				width: 100%;
+				margin-top: 1.2rem;
+			}
+
+			.row {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: stretch;
+				margin-bottom: 0.2rem;
+			}
+
+			.row button {}
+
+
+			#inputContainer input,
+			.input-headline {
+				flex-grow: 1;
+			}
+
+			.content,
+			footer {
+				margin: auto;
+				max-width: 70rem;
+				padding: 2rem;
+			}
+
+			.content {
+				background-color: #D9D9D9;
+			}
+
+			.devider {
+				height: 1rem;
+				padding-bottom: 2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<h1>Keyword redirect</h1>
+			<div class="devider"></div>
+			<h3>How it works</h3>
+			<p>Define your keywords and URLs to redirect below. Now open a new tab, type go and hit space. If you type a keyword that matches your settings, your tab will be redirected. Just close this tab when you are done.</p>
+			<div class="devider"></div>
+			<h3>Define your keywords and redirects.</h3>
+			<form id="settings">
+				<div id="inputContainer"></div>
+				<div id="controlContainer">
+					<button id="add" type="button">add</button>
+				</div>
+			</form>
+		</div>
+		<footer>
+			<a href="#">source</a>
+		</footer>
+
+		<script src="options.js"></script>
+	</body>
+</html>

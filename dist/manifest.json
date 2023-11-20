@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "keyword redirect",
+    "version": "0.1",
+    "description": "Chrome extension that redirects by keyword",
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.mjs"
+    },
+    "options_page": "options/options.html",
+    "omnibox": {
+        "keyword": "go"
+    },
+    "action": {
+        "default_icon": {
+            "16": "images/icon16.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    }
+}
