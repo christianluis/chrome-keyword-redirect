@@ -9,7 +9,6 @@ class Interface {
     init() {
         this.load(() => {
             for (var item of this.data) {
-                console.log(item);
                 this.add(item.id, item.keyword, item.target);
             }
         });
@@ -58,7 +57,7 @@ class Interface {
 
     save() {
         chrome.storage.sync.set({ ninniaKeywordRedirects: this.data }, () => {
-            console.log("saved", this.data);
+            // console.log("saved", this.data);
         });
     }
 
@@ -73,8 +72,8 @@ class Interface {
     }
 
     generateId() {
-        if (this.data.length === 0) return 0
-        let highestId = this.data.reduce((max, obj) => obj.id > max ? obj.id : max, 0);
+        if (this.data.length === 0) return 1
+        let highestId = this.data.reduce((max, obj) => obj.id > max ? obj.id : max, 1);
         return highestId + 1;
     }
 
