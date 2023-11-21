@@ -22,5 +22,5 @@ jobs:
           client_id: ${{ secrets.CLIENTID }}
           client_secret: ${{ secrets.SECRET }}
           refresh_token: ${{ secrets.TOKEN }}
-          extension_id: "lcbpjikdfbjbhoihkbkfihifijmgileo"
+          extension_id: ${{ secrets.EXTENSIONID }}
           zip_file: result.zip
