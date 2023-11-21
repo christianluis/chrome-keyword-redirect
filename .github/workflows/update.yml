@@ -1,0 +1,27 @@
+name: "Publish release"
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make repo available
+        uses: actions/checkout@v2
+      - name: Easy Zip File
+        uses: vimtor/action-zip@v1.1
+        with:
+          files: dist/*
+          dest: result.zip
+      - name: Publish Chrome extension to Chrome Web Store
+        uses: MobileFirstLLC/cws-publish@2.1.1
+        with:
+          action: "publish" # one of: upload, publish, testers
+          client_id: ${{ secrets.CLIENTID }}
+          client_secret: ${{ secrets.SECRET }}
+          refresh_token: ${{ secrets.TOKEN }}
+          extension_id: "f7d0e997-d664-4e3a-af79-71a6dfa1201c/lcbpjikdfbjbhoihkbkfihifijmgileo"
+          zip_file: result.zip
