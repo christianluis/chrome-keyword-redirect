@@ -1,9 +1,8 @@
-name: "Publish release"
+name: "Publish version"
 
 on:
-  push:
-    tags:
-      - "*"
+  release:
+    types: [published, created, edited]
 
 jobs:
   release:
