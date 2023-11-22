@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "keyword redirect",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Chrome extension that redirects by keyword",
     "permissions": [
         "activeTab",
