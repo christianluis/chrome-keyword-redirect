@@ -5,4 +5,4 @@ Specify keywords that should redirect to specific URLs in Chrome Browser. Config
 All data is only saved to local chrome storage. 
 
 ## Chrome web store
-[chrome web store]https://chrome.google.com/webstore/detail/keyword-redirect/kcilmecflaiejbhlddkbhekipmkfggjg
+https://chrome.google.com/webstore/detail/keyword-redirect/kcilmecflaiejbhlddkbhekipmkfggjg
