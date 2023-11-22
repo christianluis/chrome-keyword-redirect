@@ -1,9 +1,8 @@
-name: "Upload"
+name: "Publish"
 
 on:
-  push:
-    tags:
-      - "*"
+  release:
+    types: [published, created, edited]
 
 jobs:
   release:
@@ -19,7 +18,7 @@ jobs:
       - name: Publish Chrome extension to Chrome Web Store
         uses: MobileFirstLLC/cws-publish@2.1.1
         with:
-          action: "upload" # one of: upload, publish, testers
+          action: "publish" # one of: upload, publish, testers
           client_id: ${{ secrets.CLIENTID }}
           client_secret: ${{ secrets.SECRET }}
           refresh_token: ${{ secrets.TOKEN }}
