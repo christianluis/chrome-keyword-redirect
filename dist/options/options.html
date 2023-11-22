@@ -11,25 +11,58 @@
 			}
 
 			html {
-				font-size: 14px;
+				font-size: 16px;
 			}
 
 			body {
 				font-family: Verdana, Arial, Helvetica, sans-serif;
+				background: black;
+				color: white;
 			}
 
 			h1 {
-				font-size: 4rem;
+				font-size: 5.875rem;
+				margin-top: 2.5rem;
+			}
+
+			h2 {
+				font-size: 2.244rem;
+				margin-top: 2.5rem;
+				font-weight: normal;
 			}
 
 			h3 {
-				font-size: 1.48rem;
+				font-size: 1.387rem;
+				margin-top: 2.5rem;
+				font-weight: normal;
 			}
 
 			p {
-				font-size: 1rem;
-				line-height: 145%;
-				margin-top: 0.8rem;
+				font-size: 0.857rem;
+				line-height: 1.386rem;
+				margin-top: 0.625rem;
+				max-width: 42rem;
+			}
+
+			a,
+			a:visited {
+				color: white;
+				text-decoration: none;
+				border-bottom: 1px solid white;
+			}
+
+			header {
+				display: flex;
+				align-items: center;
+			}
+
+			header img {
+				margin-left: -4.65rem;
+				margin-top: 3.2rem;
+
+				width: 4.45rem;
+				height: 3.892rem;
+				object-position: center center;
 			}
 
 			input,
@@ -37,7 +70,8 @@
 				height: 3rem;
 				padding: 0 1rem;
 				font-size: 1.2rem;
-				margin-right: 0.2rem;
+				margin-right: 0.7725rem;
+
 				border: none;
 			}
 
@@ -47,29 +81,24 @@
 			}
 
 			input {
-				background-color: white;
+				background-color: #D6E1E2;
+			}
+
+			input:focus {
+				outline: none;
 			}
 
 			button {
 				background-color: black;
+				border: 1px white solid;
 				color: white;
-			}
-
-			footer {
-				display: flex;
-				justify-content: right;
-				font-size: 0.9rem;
-				margin-top: 2rem;
-			}
-
-			#settings {
-				width: 100%;
 			}
 
 			#inputContainer,
 			#controlContainer {
 				width: 100%;
-				margin-top: 1.2rem;
+				margin-top: 1.25rem;
+
 			}
 
 			.row {
@@ -77,54 +106,49 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: stretch;
-				margin-bottom: 0.2rem;
+				margin-bottom: 0.7725rem;
+
+
 			}
 
 			.row button {}
 
 
-			#inputContainer input,
-			.input-headline {
+			.row input:first-child {
 				flex-grow: 1;
+			}
+			.row input:nth-child(2) {
+				flex-grow: 2;
 			}
 
 			.content,
 			footer {
 				margin: auto;
-				max-width: 70rem;
-				padding: 2rem;
-			}
-
-			.content {
-				background-color: #D9D9D9;
-			}
-
-			.devider {
-				height: 1rem;
-				padding-bottom: 2rem;
+				max-width: 72rem;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="content">
-			<h1>Keyword redirect</h1>
-			<div class="devider"></div>
-			<h3>How it works</h3>
-			<p>Define your keywords and URLs to redirect below. Now open a new tab, type go and hit space. If you type a keyword that matches your settings, your tab will be redirected. Just close this tab when you are done.</p>
-			<div class="devider"></div>
-			<h3>Define your keywords and redirects.</h3>
-			<form id="settings">
-				<div id="inputContainer"></div>
-				<div id="controlContainer">
-					<button id="add" type="button">add</button>
-				</div>
-			</form>
+			<header>
+				<img src="src/icon.svg">
+				<h1>keyword redirect</h1>
+			</header>
+			<h2>often used URLs, the fastest way.</h2>
+			<p>Specify keywords that should redirect to specific URLs. Configure your keywords and URL in this settings section. Once set up, simply open a new tab, type 'go' followed by one of your keywords – and you are there.</p>
+			<h3>keywords and URLs</h3>
+			<div id="inputContainer"></div>
+			<div id="controlContainer">
+				<button id="add" type="button">add</button>
+			</div>
+			<h3>your data is saved locally.</h3>
+			<p>All data is only saved to your local chrome storage.</p>
+			<h3>give feedback</h3>
+			<p>
+				<a target="_blank" href="https://chrome.google.com/webstore/detail/keyword-redirect/kcilmecflaiejbhlddkbhekipmkfggjg#">on Chrome Store</a><br>
+				<a target="_blank" href="https://github.com/christianluis/chrome-keyword-redirect">on Github</a>
+			</p>
 		</div>
-		<footer>
-			<a target="_blank" href="https://github.com/christianLuis/chrome-keyword-redirect">source</a>
-
-		</footer>
-
 		<script src="options.js"></script>
 	</body>
 </html>
